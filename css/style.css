@@ -12225,11 +12225,11 @@ body {
   > a {
   color: #00204a;
 }
-.site-nav .site-navigation .site-menu .has-children:hover > a,
+/* .site-nav .site-navigation .site-menu .has-children:hover > a,
 .site-nav .site-navigation .site-menu .has-children:focus > a,
 .site-nav .site-navigation .site-menu .has-children:active > a {
   color: #fff;
-}
+} */
 .site-nav .site-navigation .site-menu .has-children:hover,
 .site-nav .site-navigation .site-menu .has-children:focus,
 .site-nav .site-navigation .site-menu .has-children:active {
@@ -12809,6 +12809,7 @@ textarea {
   padding-bottom: 4rem;
 }
 .section .heading {
+  color: #00204A !important;
   font-weight: 500;
 }
 @media (max-width: 767.98px) {
@@ -13341,6 +13342,10 @@ textarea {
   justify-content: space-between;
   flex-direction: column;
 }
+
+.whatWedo .box-feature {
+  height: 350px !important;
+}
 .box-feature h3,
 .box-feature .h3 {
   font-size: 16px;
@@ -13637,6 +13642,11 @@ nav[aria-label="breadcrumb"] li:before {
   font-size: 70px !important;
 }
 
+.mediumTitle {
+  font-weight: 600 !important;
+  font-size: 50px !important;
+}
+
 .whyChooseDesc {
   text-align: justify;
 }
@@ -13839,7 +13849,7 @@ nav[aria-label="breadcrumb"] li:before {
 }
 @media only screen and (max-width: 575px) {
   .ban_text strong {
-    background: rgba(0, 0, 0, 0.8);
+    /* background: rgba(0, 0, 0, 0.8); */
     padding: 10px;
     width: 100%;
     display: block;
@@ -13854,4 +13864,43 @@ nav[aria-label="breadcrumb"] li:before {
   .ban_text {
     left: 2%;
   }
+}
+
+/* styling about us  */
+.box-feature1 {
+  text-align: center !important;
+  margin: 50px 0px;
+}
+
+.box-feature1 h3 {
+  font-size: 20px;
+}
+
+.iconContainer span,
+.iconContainer i {
+  font-size: 26px;
+  color: #00204a !important;
+  /* opacity: .8; */
+}
+
+.iconContainer {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #00204a;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.numberContainer span{
+  font-size: 32px;
+  color: #00204a !important;
+  opacity: .7 !important;
+
+}
+
+.fs-50{
+  font-size: 50px !important;
 }

@@ -9,7 +9,7 @@
 		once: true
 	});
 
-	var preloader = function() {
+	var preloader = function () {
 
 		var loader = document.querySelector('.loader');
 		var overlay = document.getElementById('overlayer');
@@ -25,23 +25,23 @@
 			})();
 		};
 
-		setTimeout(function() {
+		setTimeout(function () {
 			fadeOut(loader);
 			fadeOut(overlay);
 		}, 200);
 	};
 	preloader();
-	
 
-	var tinySdlier = function() {
+
+	var tinySdlier = function () {
 
 		var heroSlider = document.querySelectorAll('.hero-slide');
 		var propertySlider = document.querySelectorAll('.property-slider');
 		var imgPropertySlider = document.querySelectorAll('.img-property-slide');
 		var testimonialSlider = document.querySelectorAll('.testimonial-slider');
-		
 
-		if ( heroSlider.length > 0 ) {
+
+		if (heroSlider.length > 0) {
 			var tnsHeroSlider = tns({
 				container: '.hero-slide',
 				mode: 'carousel',
@@ -55,7 +55,7 @@
 		}
 
 
-		if ( imgPropertySlider.length > 0 ) {
+		if (imgPropertySlider.length > 0) {
 			var tnsPropertyImageSlider = tns({
 				container: '.img-property-slide',
 				mode: 'carousel',
@@ -69,7 +69,7 @@
 			});
 		}
 
-		if ( propertySlider.length> 0 ) {
+		if (propertySlider.length > 0) {
 			var tnsSlider = tns({
 				container: '.property-slider',
 				mode: 'carousel',
@@ -94,7 +94,7 @@
 		}
 
 
-		if ( testimonialSlider.length> 0 ) {
+		if (testimonialSlider.length > 0) {
 			var tnsSlider = tns({
 				container: '.testimonial-slider',
 				mode: 'carousel',
@@ -123,3 +123,22 @@
 
 
 })()
+
+let question = document.querySelectorAll(".question");
+
+question.forEach((question) => {
+	question.addEventListener("click", (event) => {
+		const active = document.querySelector(".question.active");
+		if (active && active !== question) {
+			active.classList.toggle("active");
+			active.nextElementSibling.style.maxHeight = 0;
+		}
+		question.classList.toggle("active");
+		const answer = question.nextElementSibling;
+		if (question.classList.contains("active")) {
+			answer.style.maxHeight = answer.scrollHeight + "px";
+		} else {
+			answer.style.maxHeight = 0;
+		}
+	});
+});
